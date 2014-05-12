@@ -387,7 +387,24 @@ std::string device_addr;
 
 	tb->start();
 
+	gr_message_sptr msg;
+	while (1) {
+		if(exit_flag){ // my action when signal set it 1
+       			printf("\n Signal caught!\n");
+			tb->stop();
+			endwin(); 
+			return 0;
+		} 
 
+
+			msg = queue->delete_head();
+			parse_message(msg->to_string());	
+			msg.reset();
+			//delete(sentence);
+
+
+	}
+	/*
 
 			log_dsd_sptr log = loggers.front();
 
@@ -405,7 +422,7 @@ cout << "finished 2" << endl;
 log->deactivate();
 //tb->wait();				
 tb->stop();
-
+*/
 
   // Exit normally.
   return 0;
