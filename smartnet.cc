@@ -373,7 +373,7 @@ std::string device_addr;
 	/*	gr_null_sink_sptr nullsink = gr_make_null_sink(sizeof(u_char));
 	tb->connect(deinterleave,0,nullsink,0);*/	
 	
-/*	tb->connect(src,0,prefilter,0);
+	tb->connect(src,0,prefilter,0);
 	tb->connect(prefilter,0,carriertrack,0);
 	tb->connect(carriertrack, 0, pll_demod, 0);
 	tb->connect(pll_demod, 0, softbits, 0);
@@ -383,7 +383,7 @@ std::string device_addr;
 	
 	tb->connect(start_correlator, 0, deinterleave, 0);
 
-		tb->connect(deinterleave, 0, crc, 0);*/
+		tb->connect(deinterleave, 0, crc, 0);
 
 	tb->start();
 
