@@ -395,8 +395,9 @@ std::string device_addr;
 
 
 
-			msg = queue->delete_head();
-			parse_message(msg->to_string());	
+			//msg = queue->delete_head();
+			//parse_message(msg->to_string());
+tb->wait();				
 tb->stop();
 
 
