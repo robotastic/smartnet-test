@@ -343,7 +343,7 @@ std::string device_addr;
 	cout << "Samples per symbol: " << sps << endl;
 
 
-	init_loggers(max_loggers, center_freq);
+	//init_loggers(max_loggers, center_freq);
 
 	gr_msg_queue_sptr queue = gr_make_msg_queue();
 
