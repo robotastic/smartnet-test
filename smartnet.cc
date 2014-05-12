@@ -216,14 +216,14 @@ float parse_message(string s) {
 
 
 		if ((!rxfound)){ 
-		  
+		  	bool record_tg = false;
 				if (active_loggers.size() < max_loggers) {
 				    record_tg = true;
 				    
 				  } else {
 				  record_tg = false;
 				  }
-				}
+				
 
 		  if (record_tg){
 			log_dsd_sptr log = loggers.front();
