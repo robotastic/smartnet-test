@@ -391,13 +391,17 @@ std::string device_addr;
 
 			log_dsd_sptr log = loggers.front();
 
-
+cout << "STartn\n" <<endl;
 			log->activate(856.4, 4000,1);
+
 usleep(60*1000);
+cout << "Finished 1" << endl;
 log->deactivate();
 usleep(60*1000);
+cout << "waited 1" << endl;
 			log->activate(856.4, 4000,1);
 usleep(60*1000);
+cout << "finished 2" << endl;
 log->deactivate();
 tb->wait();				
 tb->stop();
