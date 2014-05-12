@@ -305,7 +305,7 @@ std::string device_addr;
 
 
  	signal(SIGINT, exit_interupt);
-	parse_file("ChanList.csv");
+
 
  	tb = gr_make_top_block("smartnet");
 
