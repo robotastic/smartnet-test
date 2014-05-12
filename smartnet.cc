@@ -394,16 +394,16 @@ std::string device_addr;
 cout << "STartn\n" <<endl;
 			log->activate(856.4, 4000,1);
 
-usleep(60*1000);
+usleep(60*1000000);
 cout << "Finished 1" << endl;
 log->deactivate();
-usleep(60*1000);
+usleep(10*1000000);
 cout << "waited 1" << endl;
 			log->activate(856.4, 4000,1);
-usleep(60*1000);
+usleep(60*1000000);
 cout << "finished 2" << endl;
 log->deactivate();
-tb->wait();				
+//tb->wait();				
 tb->stop();
 
 
