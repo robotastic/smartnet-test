@@ -391,23 +391,13 @@ std::string device_addr;
 
 	
 	gr_message_sptr msg;
-	int i=0;
-	while (i<100) {
-		if(exit_flag){ // my action when signal set it 1
-       			printf("\n Signal caught!\n");
-			tb->stop();
-			return 0;
-		} 
+
+
 
 
 			msg = queue->delete_head();
 			parse_message(msg->to_string());	
-			msg.reset();
-			//delete(sentence);
-			i++;
-
-	}
-	
+tb->stop();
 
 
   // Exit normally.
